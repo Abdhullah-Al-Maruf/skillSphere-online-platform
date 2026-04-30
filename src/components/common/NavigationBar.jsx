@@ -24,7 +24,7 @@ const NavigationBar = () => {
   }, []);
 
   return (
-    <nav className="border-b bg-white shadow-sm sticky top-0 z-30">
+<nav className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">

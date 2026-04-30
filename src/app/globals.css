@@ -1,2 +1,14 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: floaty 3s ease-in-out infinite;
+}
