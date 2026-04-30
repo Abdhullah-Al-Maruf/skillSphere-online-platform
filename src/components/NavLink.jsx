@@ -2,19 +2,22 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import clsx from "clsx";
 
-const NavLink = ({ href, children }) => {
+const NavLink = ({ href, children, onClick }) => {
   const pathname = usePathname();
 
-  const isActive = pathname === href;
+  const isActive =
+    href === "/"
+      ? pathname === "/"
+      : pathname.startsWith(href);
 
   return (
     <Link
       href={href}
-      className={`transition-colors duration-200 ${
+      onClick={onClick}
+      className={`${
         isActive
-          ? "border-b-2 border-amber-700 text-amber-700"
+           ? "border-b-2 border-amber-700 text-amber-700"
           : "text-black hover:text-amber-600"
       }`}
     >

@@ -73,44 +73,44 @@ const NavigationBar = () => {
       </div>
 
       <div
-        className={clsx(
-          "md:hidden transition-all duration-300 overflow-hidden",
-          isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0",
-        )}
+  className={clsx(
+    "md:hidden transition-all duration-300 overflow-hidden",
+    isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+  )}
+>
+  <div className="mx-4 mt-3 rounded-2xl border bg-white shadow-lg p-3 space-y-2">
+
+    {navItems.map((item) => (
+      <NavLink
+        key={item.name}
+        href={item.href}
+        onClick={closeMenu}
       >
-        <div className="mx-4 mt-3 rounded-2xl border bg-white shadow-lg p-3 space-y-2">
-          {/* Nav Items */}
-          {navItems.map((item) => (
-            <NavLink key={item.name} href={item.href}>
-              <div
-                onClick={closeMenu}
-                className="px-4 py-3 rounded-xl text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition flex items-center justify-between"
-              >
-                {item.name}
-                <span className="text-sm">→</span>
-              </div>
-            </NavLink>
-          ))}
-
-          {/* Divider */}
-          <div className="border-t my-2"></div>
-
-          {/* Auth */}
-          <Link
-            href="/login"
-            onClick={closeMenu}
-            className="block px-4 py-3 rounded-xl text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition"
-          >
-            Login
-          </Link>
-
-          <Link href="/signup" onClick={closeMenu}>
-            <Button className={"bg-linear-to-b from-[#ff6b00] to-[#a04100]"}>
-              Register
-            </Button>
-          </Link>
+        <div className="px-4 py-3 rounded-xl text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition flex justify-between">
+          {item.name}
+          <span>→</span>
         </div>
-      </div>
+      </NavLink>
+    ))}
+
+    <div className="border-t my-2"></div>
+
+    <Link
+      href="/login"
+      onClick={closeMenu}
+      className="block px-4 py-3 rounded-xl hover:bg-orange-50 hover:text-orange-600"
+    >
+      Login
+    </Link>
+
+    <Link href="/signup" onClick={closeMenu}>
+      <Button className="bg-linear-to-b from-[#ff6b00] to-[#a04100] w-full">
+        Register
+      </Button>
+    </Link>
+
+  </div>
+</div>
     </nav>
   );
 };
