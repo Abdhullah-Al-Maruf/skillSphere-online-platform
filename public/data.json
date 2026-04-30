@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Advanced UI/UX Masterclass",
+    "instructor": "Sarah Jenkins",
+    "duration": "12h 30m",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Master modern interface design systems.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAZbjWKNyWJRrHTJYfWsQUUqq4WHDcf2GOK1g4epqpw6Exh66SmG4VJ2ml23_Ybg7-8tOie6lMe3vFyHAcZUaPMkLILp8904Q1nFgBq9Ya5MATrh6Y_uO1tIW13dyscn57O_sdVpNAUkw93pDBGnutevRmGgKql564enmyRV44XZZJ_updg796ccA9D9zy1btm8Px2Gx_BbrxMHiyDsIdrNsnA214W3sO9FWiNaxVAuhry9s2qnoKYH_qZ6t2Q76lCmBscBslnp89g",
+    "category": "Design",
+    "price": "$129"
+  },
+  {
+    "id": 2,
+    "title": "Python for Data Science",
+    "instructor": "Marcus Thorne",
+    "duration": "18h 15m",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Analyze data and build ML models with Python.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC_M6Rlp1FD-lweMNTSP9uiZTigFoWo-m73kYZTku3MGoR7JkwTgYEPWk3ybnoyN3hq0pjBmqqWnGockCkXobEWOzX7-VtABSfO5yKBW5aEAJ-LCOV3b4p4cEG6A_O5tJ9daNZMwNX0lPclAAxYVQ5M7tDYUcL8l28CgKP40YMl_U_QwJkLEXH4grVfPKWNxOI60BiXGdM7B1KekFK9-mUUp4LxbcU91gUsb2KXBXe6j9L6Up-_jXrAPw-lxxJuLi4BDdVejB9I6Pw",
+    "category": "Technology",
+    "price": "$149"
+  },
+  {
+    "id": 3,
+    "title": "Strategic Leadership 2.0",
+    "instructor": "Elena Rodriguez",
+    "duration": "8h 45m",
+    "rating": 5.0,
+    "level": "Executive",
+    "description": "Lead teams with confidence and strategic vision.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDSqF8By4OcYu78XFRD44HpKVOSDGdrJ9-01NmggbZU5KPMXeEi3sbs0WxmKPHARmYpqPmGoYvFQuqBZ5HRG8xzS73CQwfr_n-H_kLAzeTFteUyLDnP7MC63ej3oicKRcfz3wVkIgR3pEqOPjRrpLhrrG4sroG8MRdv-cLOfCzYtV2BG-aXXR5eripNsM9k763hayCU_7s-mvupgJrOXG_j3B4NaPOE_baZrpuGYArODGj9BgYCSSnQ4Acweef3NsiOFEqdwh6RJ_Q",
+    "category": "Business",
+    "price": "$199"
+  },
+  {
+    "id": 4,
+    "title": "Mastering React Ecosystem",
+    "instructor": "David Chen",
+    "duration": "22h 00m",
+    "rating": 4.8,
+    "level": "Advanced",
+    "description": "Build scalable front-end applications with React.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCdESlpZCg3iJOTD6oIeWQPGi_3HWakDtUnbquIl2ja9moTfVHcKaVz99Wclrbxi02WJRAZPOy8RDVKSzP-fYLXjXrfdSglcFiY3HxM57nIGxcCSP2MEimu3xfoETQO4LITqRUgFjxK0d0bYT_ZOwE1KRY0SDd5cKZ-97cmIHPWm5mBrCr7huUjtS7gC5GACHAfyq6W7IA3vZR3efHaxxpWGldoQv0j_tqr6hpF3u7MpsgDuuPsuSy80iYZMw0fYtM8C-4-xx_i1SY",
+    "category": "Development",
+    "price": "$94"
+  },
+  {
+    "id": 5,
+    "title": "Neural Networks from Scratch",
+    "instructor": "James Wilson",
+    "duration": "15h 30m",
+    "rating": 4.7,
+    "level": "Expert",
+    "description": "Understand the math behind Deep Learning.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAeBHWbLvS2Cs_9Pj6cVticGgIJ_hqKbN8y0pDmuIjXl65g1uBdYZrpt2sm-Pfk7HIsGWU5jKjLVHQBOMnxC5q4WkV1g0x7488x566R7QNJlyXwXNecN_bXRcIC0xANWfwF6JXe8NAY5sAU-MIfw6pphrsjMrVoAWFnHItsd5Vf6BOaR8Lh63IMxtoHO-hZ-z2a1R43KU4vXBxO0PUFBhjav3k86bjl4CGyqeQK7Z8KFDXd8s7X15UB2hkJ3NPXAfpi2VmyfMOo_X4",
+    "category": "Data Science",
+    "price": "$129"
+  },
+  {
+    "id": 6,
+    "title": "Viral Content Engineering",
+    "instructor": "Sophia Lee",
+    "duration": "6h 20m",
+    "rating": 4.9,
+    "level": "Beginner",
+    "description": "Create marketing campaigns that spread organically.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAq5PxW99tWHfNLJEnanQBvgrrbILtRyIk2RN2dnijKhToxGtjf8HJWyoU4_n2BFQD5iQLPfTDrhaEU_0RlhlqDRctAAL5xpJYf01b4Wz-bm3_FApMO6ukoGYF2HJjx3qzxTG-3pw5nxXggVz14ehPV75BRMK8Ivi0j4Bj8ldNtUipcIynprUor7yADGKWY6u2wR7v69vv3pL6BCHeHIh8mDdjzqd9d61PLzeXBKMPoo6YTPitfRwJC5jkScAZ39edsPAFShojLYpo",
+    "category": "Marketing",
+    "price": "$65"
+  }
+]
