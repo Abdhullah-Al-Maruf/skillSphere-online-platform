@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import NavLink from "../NavLink";
+import NavLink from "./NavLink";
 import Link from "next/link";
 import clsx from "clsx";
 import { Button } from "@heroui/react";

@@ -8,7 +8,7 @@ const Instructors = async() => {
     console.log(instructors);
   return (
  <div>
-    <h1 className="text-3xl font-bold">Top Instructors</h1>
+    <h1 className=" mb-5 text-3xl font-bold">Top Instructors</h1>
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
 {
     instructors.map(instructor=><InstructorCard key={instructor.id} instructor={instructor}/>)
