@@ -1,15 +1,11 @@
-import {  Manrope } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "@/components/common/NavigationBar";
-import Footer from "@/components/footer/Footer";
 
 
 const fontManrope = Manrope({
-
   subsets: ["latin"],
 });
-
-
 
 export const metadata = {
   title: "Create Next App",
@@ -18,16 +14,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${fontManrope.className} h-full antialiased`}
-    >
+    <html lang="en" className={`${fontManrope.className} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-    <NavigationBar/>
-        <main
-        className="w-[80%] mx-auto"
-        >{children}</main>
-        <Footer/>
+             <NavigationBar/>
+        <main className="w-[80%] mx-auto">{children}</main>
       </body>
     </html>
   );
