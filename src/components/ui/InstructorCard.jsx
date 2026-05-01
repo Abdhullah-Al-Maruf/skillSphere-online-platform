@@ -1,4 +1,4 @@
-import { Avatar, Card } from "@heroui/react";
+import { Card } from "@heroui/react";
 import Image from "next/image";
 const InstructorCard = ({ instructor }) => {
   return (
