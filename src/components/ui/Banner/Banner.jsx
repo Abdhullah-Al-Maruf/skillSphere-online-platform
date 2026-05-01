@@ -68,7 +68,7 @@ const Banner = () => {
 
         <motion.div
           variants={itemVariants}
-          className="flex gap-2 md:justify-center"
+          className="flex gap-2 md:justify-center lg:justify-start"
         >
           <Link href="/courses">
             <Button
