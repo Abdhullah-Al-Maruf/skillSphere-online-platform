@@ -4,13 +4,16 @@ import CourseCard from '../ui/CourseCard';
 
 const PopularCoursesSection =async () => {
     const data =await getData()
-    const firstThree=data.slice(0,4)
+    const firstThree=data.slice(0,3)
     console.log(firstThree);
     return (
-        <div>
+        <div >
       
-             <h1 className='text-3xl font-bold '>Popular Courses</h1>
+             <h1 className='mt-20 mb-4 text-3xl font-bold '>Popular Courses</h1>
+             <div className='grid gap-5 md:grid-cols-2 lg:grid-cols-3'>
+
       {firstThree.map(data=> <CourseCard key={data.id} data={data}/>)}
+             </div>
         </div>
     );
 };
