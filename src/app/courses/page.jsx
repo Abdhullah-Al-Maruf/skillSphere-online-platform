@@ -1,4 +1,4 @@
-import { getData } from '@/Data/Getdata';
+import { getData } from '@/utils/Getdata';
 import React from 'react';
 
 const Courses =async () => {
