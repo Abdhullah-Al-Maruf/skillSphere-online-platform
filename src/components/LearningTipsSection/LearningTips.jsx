@@ -6,10 +6,10 @@ import { TfiTarget } from "react-icons/tfi";
 
 const LearningTips = () => {
   return (
-    <div>
-      <div className="text-center space-y-4">
+    <div className="mt-30">
+      <div className="text-center space-y-4 ">
         <h1 className="font-bold text-3xl">Learning Tips</h1>
-        <p className="text-neutral-800 font-semibold">
+        <p className="mb-15 text-neutral-800 font-semibold">
           Master the art of effective learning with these proven techniques.
         </p>
 

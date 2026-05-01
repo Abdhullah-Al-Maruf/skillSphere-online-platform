@@ -1,6 +1,7 @@
 import {  Manrope } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "@/components/common/NavigationBar";
+import Footer from "@/components/footer/Footer";
 
 
 const fontManrope = Manrope({
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
         <main
         className="w-[80%] mx-auto"
         >{children}</main>
+        <Footer/>
       </body>
     </html>
   );

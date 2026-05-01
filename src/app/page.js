@@ -1,4 +1,4 @@
-import Banner from "@/components/Banner";
+import Banner from "@/components/ui/Banner/Banner";
 import Instructors from "@/components/InstructorSection/Instructors";
 import LearningTips from "@/components/LearningTipsSection/LearningTips";
 import PopularCoursesSection from "@/components/PopularCourses/PopularCoursesSection";

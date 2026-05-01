@@ -26,7 +26,7 @@ const ReadytoTransform = () => {
           <div className="flex gap-4 flex-col md:flex-row ">
             
             {/* Primary Action: Get Started Now -> Redirects to Register */}
-            <Link href="/register">
+            <Link href="/signup">
               <button className="group relative flex items-center justify-center px-8 py-3.5 text-base font-bold text-[#a04100] bg-white rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-orange-500/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#a04100]">
                 Get Started Now
                 {/* Simple arrow icon that moves on hover */}
@@ -38,7 +38,7 @@ const ReadytoTransform = () => {
             <button className="flex   items-center justify-center px-8 py-3.5 text-base font-semibold text-white border border-white/30 bg-white/10 backdrop-blur-sm rounded-full transition-all duration-300 hover:bg-white/20 hover:border-white/50 focus:outline-none focus:ring-2 focus:ring-white/50">
               Corporate Training
             </button>
-            
+   
           </div>
         </div>
       </div>
