@@ -55,7 +55,7 @@ const LoginPage = () => {
         {/* Header Section */}
         <motion.div variants={itemVariants} className="text-center mb-8">
           <span
-            className="text-2xl font-bold bg-gradient-to-r from-[#ff6b00] to-[#a04100] bg-clip-text text-transparent block mb-2"
+            className="text-2xl font-bold bg-linear-to-r from-[#ff6b00] to-[#a04100] bg-clip-text text-transparent block mb-2"
           >
             SkillSphere
           </span>
@@ -87,7 +87,7 @@ const LoginPage = () => {
               <Label className="text-gray-700 font-semibold text-sm">Email Address</Label>
               <Input 
                 placeholder="name@example.com" 
-                className="border-orange-200 focus:border-orange-500"
+                className=" border border-orange-200 focus-within:border-orange-500 transition-colors"
               />
               <FieldError />
             </TextField>
@@ -128,7 +128,7 @@ const LoginPage = () => {
           <motion.div variants={itemVariants} className="pt-2">
             <Button
               type="submit"
-              className="w-full rounded-xl bg-gradient-to-r from-[#ff6b00] to-[#a04100] text-white font-semibold shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+              className="w-full rounded-xl bg-linear-to-r from-[#ff6b00] to-[#a04100] text-white font-semibold shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
             >
               <Check className="mr-2" />
               Login

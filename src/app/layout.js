@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${fontManrope.className} h-full antialiased`}>
-      <body className="bg-[#fff7f2] min-h-full flex flex-col">
+      <body className="bg-[#ffece3] min-h-full flex flex-col">
              <NavigationBar/>
         <main className="w-[85%] mx-auto">{children}</main>
       </body>

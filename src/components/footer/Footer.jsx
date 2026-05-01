@@ -4,7 +4,7 @@ import { Button } from "@heroui/react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#fff7f2] border-t border-gray-200 pt-12 pb-8 px-6 md:px-12">
+    <footer className="bg-[#ffece3] border-t border-gray-200 pt-12 pb-8 px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Brand Section */}
         <div className="space-y-3">
