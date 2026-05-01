@@ -1,5 +1,6 @@
 import { getData } from '@/utils/Getdata';
 import React from 'react';
+import CourseCard from '../ui/CourseCard';
 
 const PopularCoursesSection =async () => {
     const data =await getData()
@@ -9,7 +10,7 @@ const PopularCoursesSection =async () => {
         <div>
       
              <h1 className='text-3xl font-bold '>Popular Courses</h1>
-      {firstThree.map(p=> <li key={p.id}> {p.title}</li>)}
+      {firstThree.map(data=> <CourseCard key={data.id} data={data}/>)}
         </div>
     );
 };
