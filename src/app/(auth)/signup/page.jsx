@@ -43,7 +43,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[#F9F7F5] flex items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
+    <div className="min-h-screen w-full bg-[#fff7f2] flex items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
       
       <motion.div
         className="w-full max-w-[450px] bg-white border border-gray-200 shadow-xl shadow-orange-100/50 p-8 sm:p-10 rounded-3xl"
@@ -56,6 +56,7 @@ const RegisterPage = () => {
             SkillSphere
           </span>
           <h1 className="text-2xl font-bold text-gray-900">Create Account</h1>
+       
           <p className="text-gray-500 text-sm mt-2">
             Enter your details to illuminate your growth path.
           </p>

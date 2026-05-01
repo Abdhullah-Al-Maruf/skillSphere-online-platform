@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Signupfooter() {
   return (
-    <footer className="bg-gray-50 border-t py-6 px-6 md:px-12">
+    <footer className="bg-[#fff7f2] border-t py-6 px-6 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-600">
         
         {/* Brand & Copyright */}
