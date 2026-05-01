@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Chen",
+    "role": "SENIOR UX ARCHITECT",
+    "description": "Former Head of Design at Meta with 15+ years experience.",
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
+  },
+  {
+    "id": 2,
+    "name": "Marcus Thorne",
+    "role": "DATA SCIENTIST",
+    "description": "Ph.D. in AI and Lead Data Strategist for Global FinTech.",
+    "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200"
+  },
+  {
+    "id": 3,
+    "name": "Elena Rodriguez",
+    "role": "CEO COACH",
+    "description": "Fortune 500 consultant specializing in organizational growth.",
+    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200"
+  },
+  {
+    "id": 4,
+    "name": "David Park",
+    "role": "FULL STACK DEV",
+    "description": "Open source contributor and Lead Engineer at top SV startup.",
+    "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200"
+  }
+]

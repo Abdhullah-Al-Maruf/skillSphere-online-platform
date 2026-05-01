@@ -4,7 +4,7 @@ import {Card, Link} from "@heroui/react";
 const TipsCard = ({icon,title,paragraph,href  }) => {
     return (
            <Card>
-            <p className="bg-[#fff5eb]  text-orange-500 w-fit p-2">{icon} </p>
+            <p className="bg-[#fff5eb] rounded-xl text-orange-500 w-fit p-2">{icon} </p>
       <Card.Header>
         <Card.Title>{title}</Card.Title>
         <Card.Description className="text-[#5a4136]">
