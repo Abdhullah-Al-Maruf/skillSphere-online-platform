@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "Sarah Chen",
+    "instructorImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop",
+    "duration": "20 hours",
+    "rating": 4.9,
+    "level": "Beginner",
+    "description": "Master HTML, CSS, JavaScript, React, Node.js and build 10+ real-world projects from scratch.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=500&fit=crop",
+    "category": "Development",
+    "addedDate": "2026-01-15",
+    "enrollments": 12500
+  },
+  {
+    "id": 2,
+    "title": "Digital Marketing Strategy 2025",
+    "instructor": "Maya Patel",
+    "instructorImage": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop",
+    "duration": "12 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Master SEO, social media marketing, Google Ads, and analytics to grow any business online.",
+    "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&h=500&fit=crop",
+    "category": "Marketing",
+    "addedDate": "2026-04-01",
+    "enrollments": 6200
+  },
+  {
+    "id": 3,
+    "title": "Mobile App Development with React Native",
+    "instructor": "Lisa Wong",
+    "instructorImage": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150&h=150&fit=crop",
+    "duration": "18 hours",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Build cross-platform iOS and Android apps using React Native, Expo, and Firebase.",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=500&fit=crop",
+    "category": "Development",
+    "addedDate": "2026-04-10",
+    "enrollments": 4100
+  }
+]
