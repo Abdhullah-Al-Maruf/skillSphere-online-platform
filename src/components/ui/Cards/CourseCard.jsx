@@ -10,6 +10,7 @@ const CourseCard = ({ data }) => {
     image,
     rating,
     category,
+    title,
     price,
     instructor,
     description,
@@ -51,6 +52,10 @@ const CourseCard = ({ data }) => {
         </p>
 
         <h2 className="text-2xl font-bold text-gray-800 leading-snug">
+          {title}
+        </h2>
+
+        <h2 className="text-small font-bold text-gray-800 leading-snug">
           {description}
         </h2>
 
