@@ -38,7 +38,7 @@ const floatVariants = {
 
 const Banner = () => {
   return (
-    <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-6 px-4 sm:px-6 lg:px-12  rounded-xl mt-5 bg-linear-to-r from-[#ff7a18] to-[#ff3d00]">
+    <div className="w-full flex flex-col lg:flex-row items-center justify-evenly gap-6 px-4 sm:px-6 lg:px-12  rounded-xl mt-5 bg-linear-to-r from-[#ff7a18] to-[#ff3d00]">
       {/* LEFT SIDE */}
       <motion.div
         className="space-y-4 max-w-xl text-center lg:text-left"

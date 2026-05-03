@@ -1,7 +1,7 @@
 "use client";
 
-import { GiBrainTentacle } from "react-icons/gi";
-import TipsCard from "../ui/TipsCard";
+
+import TipsCard from "../ui/Cards/TipsCard";
 import { Clock } from "@gravity-ui/icons";
 import { LuBrain } from "react-icons/lu";
 import { TfiTarget } from "react-icons/tfi";
@@ -42,7 +42,7 @@ const LearningTips = () => {
       >
         {/* Header Section */}
         <motion.div variants={itemVariants}>
-          <h1 className="font-bold text-3xl text-gray-900">Learning Tips</h1>
+          <h1 className="font-bold text-3xl text-gray-600">Learning Tips</h1>
         </motion.div>
         
         <motion.p

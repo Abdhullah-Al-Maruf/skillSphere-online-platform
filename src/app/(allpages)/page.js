@@ -5,12 +5,16 @@ import PopularCoursesSection from "@/components/PopularCourses/PopularCoursesSec
 import ReadytoTransform from "@/components/ReadytoTransformSection/ReadytoTransform";
 import { Button } from "@heroui/react";
 import Image from "next/image";
+import NewReleaseSection from "@/components/newReleaseSection/NewReleaseSection";
+import NewReleaseList from "@/components/newReleaseSection/NewReleaseList";
 
 export default function Home() {
   return (
     <div>
       <Banner/>
       <PopularCoursesSection/>
+      <NewReleaseSection/>
+   
       <LearningTips/>
       <Instructors/>
       <ReadytoTransform/>

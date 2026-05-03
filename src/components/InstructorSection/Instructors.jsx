@@ -1,5 +1,5 @@
 import { getInstructorData } from "@/utils/Getdata";
-import InstructorCard from "../ui/InstructorCard";
+import InstructorCard from "../ui/Cards/InstructorCard";
 import { Button } from "@heroui/react";
 
 
@@ -10,7 +10,7 @@ const Instructors = async() => {
   return (
  <div className="mt-30">
     <div className="flex justify-between ">
-    <h1 className=" mb-5 text-3xl font-bold">Top Instructors</h1>
+    <h1 className=" mb-5 text-3xl font-bold text-gray-600">Top Instructors</h1>
           <Button
                 variant="outline"
                 className="border-2 border-amber-800 text-amber-800 font-bold"

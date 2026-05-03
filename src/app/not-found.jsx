@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4 text-center">
+    <div className="min-h-screen bg-[#ffece3]  flex flex-col items-center justify-center px-4 text-center">
       
       {/* Large 404 Text with Orange Gradient/Shadow */}
       <h1 className="text-9xl font-extrabold text-orange-500 tracking-tight">
