@@ -14,7 +14,7 @@ const allCourseSection = () => {
           lifelong learners.
         </p>
       </div>
-      <h1 className="mt-5 font-bold text-2xl text-gray-600">All Courses</h1>
+      {/* <h1 className="mt-5 font-bold text-2xl text-gray-600">All Courses</h1> */}
       <Suspense fallback={<Skeleton count={6} />}>
    <AllCourseList></AllCourseList>
       </Suspense>
