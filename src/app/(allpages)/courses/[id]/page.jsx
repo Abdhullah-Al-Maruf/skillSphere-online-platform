@@ -27,14 +27,9 @@ const router =useRouter();
   return (
     <div>
 
-      <CoursePage/>
-        <div> <CourseDetailsCard course={course}/></div>
-      <Button
-    
-      className=" bg-linear-to-r from-[#ff8a00] to-[#ff3d00]"
-      onClick={()=>router.back()}>
-       <ArrowShapeLeft/> Back
-      </Button>
+      <CoursePage course={course} />
+ 
+      
     </div>
   );
 };
