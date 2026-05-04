@@ -18,6 +18,7 @@ import { FiLink } from "react-icons/fi";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 
+
 const containerVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -66,6 +67,7 @@ const Rightside = () => {
         autoClose: 1000,
       });
     }
+    console.log(data,error);
   };
 
  // for google auth
