@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@heroui/react";
 import { Star } from "@gravity-ui/icons";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const CourseCard = ({ data }) => {
   const {
@@ -94,12 +95,15 @@ const CourseCard = ({ data }) => {
           <h3 className="text-2xl font-bold text-gray-900">{price}</h3>
 
           <motion.div whileTap={{ scale: 0.95 }}>
+            <Link href={`/courses/${data.id}`}>
             <Button
               variant="bordered"
               className="border border-orange-500 text-orange-600 rounded-full px-5 py-2 hover:bg-orange-50"
             >
               View Details
             </Button>
+            </Link>
+            
           </motion.div>
         </div>
       </div>

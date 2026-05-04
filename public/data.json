@@ -10,9 +10,10 @@
     "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAZbjWKNyWJRrHTJYfWsQUUqq4WHDcf2GOK1g4epqpw6Exh66SmG4VJ2ml23_Ybg7-8tOie6lMe3vFyHAcZUaPMkLILp8904Q1nFgBq9Ya5MATrh6Y_uO1tIW13dyscn57O_sdVpNAUkw93pDBGnutevRmGgKql564enmyRV44XZZJ_updg796ccA9D9zy1btm8Px2Gx_BbrxMHiyDsIdrNsnA214W3sO9FWiNaxVAuhry9s2qnoKYH_qZ6t2Q76lCmBscBslnp89g",
     "category": "Design",
     "price": "$129",
-     "InstructorImage": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200"
+    "InstructorImage": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200",
+    "badges":  "Highest Rated",
+    "longDescription": "Elevate your design skills to a professional standard. This comprehensive program covers the entire design lifecycle—from initial wireframing and user research to creating sophisticated interaction patterns and accessible systems. You'll work with real-world case studies used by top-tier SaaS companies. Master design system architecture, advanced auto-layout techniques, and create seamless handoff workflows for developers. Learn industry-standard tools and methodologies that will transform you into a confident, job-ready UI/UX designer capable of tackling complex design challenges."
   },
-
   {
     "id": 2,
     "title": "Python for Data Science",
@@ -24,7 +25,9 @@
     "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC_M6Rlp1FD-lweMNTSP9uiZTigFoWo-m73kYZTku3MGoR7JkwTgYEPWk3ybnoyN3hq0pjBmqqWnGockCkXobEWOzX7-VtABSfO5yKBW5aEAJ-LCOV3b4p4cEG6A_O5tJ9daNZMwNX0lPclAAxYVQ5M7tDYUcL8l28CgKP40YMl_U_QwJkLEXH4grVfPKWNxOI60BiXGdM7B1KekFK9-mUUp4LxbcU91gUsb2KXBXe6j9L6Up-_jXrAPw-lxxJuLi4BDdVejB9I6Pw",
     "category": "Technology",
     "price": "$149",
-     "InstructorImage":"https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200"
+    "InstructorImage": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200",
+    "badges": "New & Trending", 
+    "longDescription": "Transform raw data into actionable insights with Python's most powerful data science libraries. This hands-on course takes you from Python basics to building sophisticated machine learning models. You'll master Pandas for data manipulation, NumPy for numerical computing, Matplotlib and Seaborn for visualization, and Scikit-Learn for machine learning. Work with real-world datasets from finance, healthcare, and e-commerce sectors. Build a professional portfolio with 5+ capstone projects that demonstrate your skills to potential employers. Perfect for career changers and analysts looking to upgrade their technical toolkit."
   },
   {
     "id": 3,
@@ -37,7 +40,9 @@
     "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDSqF8By4OcYu78XFRD44HpKVOSDGdrJ9-01NmggbZU5KPMXeEi3sbs0WxmKPHARmYpqPmGoYvFQuqBZ5HRG8xzS73CQwfr_n-H_kLAzeTFteUyLDnP7MC63ej3oicKRcfz3wVkIgR3pEqOPjRrpLhrrG4sroG8MRdv-cLOfCzYtV2BG-aXXR5eripNsM9k763hayCU_7s-mvupgJrOXG_j3B4NaPOE_baZrpuGYArODGj9BgYCSSnQ4Acweef3NsiOFEqdwh6RJ_Q",
     "category": "Business",
     "price": "$199",
-     "InstructorImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
+    "InstructorImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200",
+    "badges": "Expert Instructor",
+    "longDescription": "Develop the strategic mindset and leadership capabilities required to excel in today's complex business environment. This executive-level program combines cutting-edge leadership theory with practical frameworks used by Fortune 500 companies. Learn to navigate organizational politics, drive digital transformation, build high-performance cultures, and make data-driven strategic decisions. Master the art of influence without authority, manage cross-functional teams, and lead through uncertainty. Includes exclusive access to leadership assessment tools, peer networking opportunities, and one-on-one coaching sessions with Elena Rodriguez."
   },
   {
     "id": 4,
@@ -50,7 +55,9 @@
     "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCdESlpZCg3iJOTD6oIeWQPGi_3HWakDtUnbquIl2ja9moTfVHcKaVz99Wclrbxi02WJRAZPOy8RDVKSzP-fYLXjXrfdSglcFiY3HxM57nIGxcCSP2MEimu3xfoETQO4LITqRUgFjxK0d0bYT_ZOwE1KRY0SDd5cKZ-97cmIHPWm5mBrCr7huUjtS7gC5GACHAfyq6W7IA3vZR3efHaxxpWGldoQv0j_tqr6hpF3u7MpsgDuuPsuSy80iYZMw0fYtM8C-4-xx_i1SY",
     "category": "Development",
     "price": "$94",
-     "InstructorImage": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200"
+    "InstructorImage": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200",
+    "badges":"Bestseller", 
+    "longDescription": "Go beyond React basics and become a true frontend architect. This comprehensive course covers the entire React ecosystem including Next.js for server-side rendering, Redux and Context API for state management, React Query for data fetching, and modern testing strategies with Jest and React Testing Library. Learn performance optimization techniques, code splitting, lazy loading, and advanced hooks patterns. Build production-ready applications with TypeScript integration, implement authentication and authorization, and deploy using modern CI/CD pipelines. Perfect for developers ready to level up their React expertise and build enterprise-grade applications."
   },
   {
     "id": 5,
@@ -63,7 +70,9 @@
     "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAeBHWbLvS2Cs_9Pj6cVticGgIJ_hqKbN8y0pDmuIjXl65g1uBdYZrpt2sm-Pfk7HIsGWU5jKjLVHQBOMnxC5q4WkV1g0x7488x566R7QNJlyXwXNecN_bXRcIC0xANWfwF6JXe8NAY5sAU-MIfw6pphrsjMrVoAWFnHItsd5Vf6BOaR8Lh63IMxtoHO-hZ-z2a1R43KU4vXBxO0PUFBhjav3k86bjl4CGyqeQK7Z8KFDXd8s7X15UB2hkJ3NPXAfpi2VmyfMOo_X4",
     "category": "Data Science",
     "price": "$129",
-     "InstructorImage": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200"
+    "InstructorImage": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200",
+    "badges": "Expert Level", 
+    "longDescription": "Build neural networks from the ground up without relying on high-level frameworks like TensorFlow or PyTorch. This math-intensive course demystifies deep learning by teaching you to implement every component manually using only NumPy. Gain deep intuition about backpropagation, gradient descent optimization, activation functions, and loss calculations. Understand the mathematical foundations including linear algebra, calculus, and probability theory that power modern AI systems. Implement CNNs, RNNs, LSTMs, and transformers from scratch. Ideal for researchers, graduate students, and practitioners who want true mastery of neural network internals rather than just API knowledge."
   },
   {
     "id": 6,
@@ -76,6 +85,8 @@
     "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAq5PxW99tWHfNLJEnanQBvgrrbILtRyIk2RN2dnijKhToxGtjf8HJWyoU4_n2BFQD5iQLPfTDrhaEU_0RlhlqDRctAAL5xpJYf01b4Wz-bm3_FApMO6ukoGYF2HJjx3qzxTG-3pw5nxXggVz14ehPV75BRMK8Ivi0j4Bj8ldNtUipcIynprUor7yADGKWY6u2wR7v69vv3pL6BCHeHIh8mDdjzqd9d61PLzeXBKMPoo6YTPitfRwJC5jkScAZ39edsPAFShojLYpo",
     "category": "Marketing",
     "price": "$65",
-     "InstructorImage": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200"
+    "InstructorImage": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200",
+    "badges": "Beginner Friendly",
+    "longDescription": "Unlock the secrets behind content that captures attention and spreads like wildfire across social media platforms. This beginner-friendly course reveals the psychological triggers, algorithmic insights, and creative frameworks that drive viral engagement. Learn to craft compelling hooks, optimize for platform-specific algorithms (TikTok, Instagram, YouTube, LinkedIn), and create content that resonates emotionally with your target audience. Master the art of storytelling, visual design principles, and strategic posting schedules. Includes templates, swipe files, and case studies from campaigns that generated millions of views. Perfect for marketers, creators, and business owners ready to exponentially grow their organic reach."
   }
 ]
