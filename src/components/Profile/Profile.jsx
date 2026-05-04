@@ -6,6 +6,7 @@ import { Avatar } from "@heroui/react";
 import { useState } from "react";
 import { BiAward, BiTrendingUp } from "react-icons/bi";
 import { UpdateProfileModal } from "./UpdateProfileModal";
+import NoProfilePage from "./NoProfilePage";
 
 export default function Profile() {
 // for modal
@@ -18,7 +19,7 @@ const [modal,setModal]=useState(false)
   return (
     <div className="min-h-screen mb-15  p-4 md:p-8">
       {!user && (
-        <NotFound/>
+      <NoProfilePage/>
       )}
 
       {user && (
