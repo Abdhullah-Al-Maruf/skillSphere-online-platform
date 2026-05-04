@@ -5,6 +5,7 @@ import NavLink from "./NavLink";
 import Link from "next/link";
 import clsx from "clsx";
 import { Avatar, Button } from "@heroui/react";
+import { toast } from "react-toastify";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -26,8 +27,11 @@ const NavigationBar = () => {
   // for avatar and conditional sign in signup showing we need the session data
   const userData = authClient.useSession();
   const user = userData.data?.user;
-  console.log(user);
-
+const handleLogout= async()=>{
+  toast.info("Signout Successful")
+  await authClient.signOut();
+}
+console.log(user);
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -70,18 +74,25 @@ const NavigationBar = () => {
         )}
         {user && (
           <div className=" flex items-center ml-[120px]  gap-1 px-2 py-3 text-sm text-gray-700">
-            <Avatar className="">
-              <Avatar.Image
-                alt="John Doe"
-                src={user?.image}
-              />
-              <Avatar.Fallback>JD</Avatar.Fallback>
-            </Avatar>
+         <Avatar>
+  <Avatar.Image
+    alt={user?.name || "User"}
+    src={user?.image || undefined}
+  />
+
+  <Avatar.Fallback>
+    {user?.name
+      ? user.name.trim().split(/\s+/)[0][0].toUpperCase()
+      : "U"}
+  </Avatar.Fallback>
+</Avatar>
               <div className="block md:hidden text-sm font-medium text-gray-700">
                 Hi,{user.name?.split(" ")[0] || "User"}
 
               </div>
-              <div> <Button className=" hidden md:bg-linear-to-b from-[#ff6b00] to-[#a04100] w-full">
+              <div> <Button
+              onClick={handleLogout}
+              className=" hidden md:block bg-linear-to-b from-[#ff6b00] to-[#ff3d00] w-full">
                     Logout
                   </Button></div>
          
@@ -134,7 +145,9 @@ const NavigationBar = () => {
                 </Link>
               </div>
             )}
-            {user &&  <Button className="bg-linear-to-b from-[#ff6b00] to-[#a04100] w-full">
+            {user &&  <Button  
+            onClick={handleLogout}
+            className="bg-linear-to-b  from-[#ff6b00] to-[#ff3d00] w-full">
                     Logout
                   </Button>}
           </div>

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
+
 @keyframes floaty {
   0%, 100% {
     transform: translateY(0px);
