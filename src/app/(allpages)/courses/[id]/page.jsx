@@ -5,6 +5,7 @@ import { getData } from "@/utils/Getdata";
 import { Button } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import {  ArrowShapeLeft } from "@gravity-ui/icons";
+import CourseDetailsCard from "@/components/ui/Cards/CourseDetailsCard";
 
 
 const DetailsPage = ({ params }) => {
@@ -24,9 +25,7 @@ const router =useRouter();
 
   return (
     <div>
-      <h1>Details Page</h1>
-      <p>ID: {course?.id}</p>
-      <p>Title: {course?.title}</p>
+        <div> <CourseDetailsCard course={course}/></div>
       <Button
     
       className=" bg-linear-to-r from-[#ff8a00] to-[#ff3d00]"
