@@ -1,4 +1,5 @@
 "use client";
+import { authClient } from "@/lib/auth-client"; //import the auth client
 import { Eye, EyeSlash, Lock, Person } from "@gravity-ui/icons";
 import {
   Button,
@@ -13,7 +14,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { CgMail } from "react-icons/cg";
-import { FiLink } from "react-icons/fi"; // ✅ fixed icon
+import { FiLink } from "react-icons/fi";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -34,16 +37,39 @@ const itemVariants = {
 };
 
 const Rightside = () => {
+  const route = useRouter();
   const [isVisible, setIsVisible] = useState(false);
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log("Registration submitted");
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const image = e.target.photoUrl.value;
+    const password = e.target.password.value;
+
+    const { data, error } = await authClient.signUp.email({
+      email,
+      password,
+      name,
+      image,
+    });
+    if (!error) {
+      toast.success("Welcome! Account created Redirecting to login..", {
+        position: "top-center",
+        autoClose: 3000,
+      });
+
+      route.push("/login");
+    } else {
+      toast.error(error.message, {
+        position: "top-center",
+        autoClose: 1000,
+      });
+    }
   };
 
   return (
-   <div className="w-full max-w-[500px] mt-2 py-10">
-      
+    <div className="w-full max-w-[500px] mt-2 py-10">
       <motion.div
         className="w-full max-w-[450px] bg-white border border-gray-200 shadow-xl shadow-orange-100/50 p-8 sm:p-10 rounded-3xl"
         variants={containerVariants}
@@ -55,7 +81,7 @@ const Rightside = () => {
             SkillSphere
           </span>
           <h1 className="text-2xl font-bold text-gray-900">Create Account</h1>
-       
+
           <p className="text-gray-500 text-sm mt-2">
             Enter your details to illuminate your growth path.
           </p>
@@ -67,8 +93,10 @@ const Rightside = () => {
           onSubmit={onSubmit}
         >
           <motion.div variants={itemVariants}>
-            <TextField isRequired name="fullName">
-              <Label className="text-gray-700 font-semibold text-sm">Full Name</Label>
+            <TextField isRequired name="name">
+              <Label className="text-gray-700 font-semibold text-sm">
+                Full Name
+              </Label>
               <InputGroup className="rounded-xl border border-orange-200 focus-within:border-orange-500 transition-colors">
                 <InputGroup.Prefix className="pl-3 text-gray-400">
                   <Person className="size-5" />
@@ -94,7 +122,9 @@ const Rightside = () => {
                 return null;
               }}
             >
-              <Label className="text-gray-700 font-semibold text-sm">Email Address</Label>
+              <Label className="text-gray-700 font-semibold text-sm">
+                Email Address
+              </Label>
               <InputGroup className="rounded-xl border border-orange-200 focus-within:border-orange-500 transition-colors bg-gray-50/50">
                 <InputGroup.Prefix className="pl-3 text-gray-400">
                   <CgMail className="size-5" />
@@ -109,15 +139,13 @@ const Rightside = () => {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <TextField
-            isRequired
-            name="photoUrl">
+            <TextField isRequired name="photoUrl">
               <Label className="text-gray-700 font-semibold text-sm">
                 Photo URL
               </Label>
               <InputGroup className="rounded-xl border border-orange-200 focus-within:border-orange-500 transition-colors bg-gray-50/50">
                 <InputGroup.Prefix className="pl-3 text-gray-400">
-                  <FiLink className="size-5" /> 
+                  <FiLink className="size-5" />
                 </InputGroup.Prefix>
                 <InputGroup.Input
                   placeholder="https://..."
@@ -129,7 +157,9 @@ const Rightside = () => {
 
           <motion.div variants={itemVariants}>
             <TextField isRequired className="w-full" name="password">
-              <Label className="text-gray-700 font-semibold text-sm">Password</Label>
+              <Label className="text-gray-700 font-semibold text-sm">
+                Password
+              </Label>
               <InputGroup className="rounded-xl border border-orange-200 focus-within:border-orange-500 transition-colors bg-gray-50/50">
                 <InputGroup.Prefix className="pl-3 text-gray-400">
                   <Lock className="size-5" />
@@ -190,7 +220,10 @@ const Rightside = () => {
           </Button>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="text-center mt-8 text-sm">
+        <motion.div
+          variants={itemVariants}
+          className="text-center mt-8 text-sm"
+        >
           <span className="text-gray-500">Already have an account? </span>
           <Link
             href="/login"

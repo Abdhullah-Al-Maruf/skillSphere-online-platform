@@ -6,6 +6,7 @@ import { Button } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import {  ArrowShapeLeft } from "@gravity-ui/icons";
 import CourseDetailsCard from "@/components/ui/Cards/CourseDetailsCard";
+import CoursePage from "@/components/ui/CoursePage";
 
 
 const DetailsPage = ({ params }) => {
@@ -25,6 +26,8 @@ const router =useRouter();
 
   return (
     <div>
+
+      <CoursePage/>
         <div> <CourseDetailsCard course={course}/></div>
       <Button
     
