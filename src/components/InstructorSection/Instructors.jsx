@@ -6,7 +6,7 @@ import { Button } from "@heroui/react";
 
 const Instructors = async() => {
     const instructors =await getInstructorData()
-    console.log(instructors);
+ 
   return (
  <div className="mt-30">
     <div className="flex justify-between ">

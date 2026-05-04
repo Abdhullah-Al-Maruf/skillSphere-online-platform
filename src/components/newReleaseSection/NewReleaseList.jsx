@@ -7,9 +7,9 @@ import NewReleaseCard from "../ui/Cards/NewReleaseCard";
 
 const NewReleaseList =async () => {
     const releaseData =await getNewReleaseData()
-    console.log("release data",releaseData);
+    
     const allReleaseCourses=[...releaseData]
-    console.log(allReleaseCourses);
+    
   const sortedData=  allReleaseCourses.sort((a,b)=> new Date(a.addedDate)-new Date(b.addedDate))
     
     return (

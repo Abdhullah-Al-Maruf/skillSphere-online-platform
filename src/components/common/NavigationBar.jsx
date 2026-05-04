@@ -1,10 +1,10 @@
 "use client";
-
+import { authClient } from "@/lib/auth-client"; // import the auth client
 import { useState, useCallback } from "react";
 import NavLink from "./NavLink";
 import Link from "next/link";
 import clsx from "clsx";
-import { Button } from "@heroui/react";
+import { Avatar, Button } from "@heroui/react";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -23,8 +23,13 @@ const NavigationBar = () => {
     setIsOpen(false);
   }, []);
 
+  // for avatar and conditional sign in signup showing we need the session data
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
+  console.log(user);
+
   return (
-<nav className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md shadow-sm">
+    <nav className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -43,23 +48,45 @@ const NavigationBar = () => {
         </div>
 
         {/* Desktop Auth */}
-        <div className="hidden md:flex items-center gap-4">
-          <Link
-            href="/login"
-            className="text-gray-600 hover:text-orange-500 font-medium"
-          >
-            Login
-          </Link>
-          <Link href="/signup">
-            <Button
-              className={
-                "bg-linear-to-b from-[#ff6b00] to-[#a04100] shadow-lg shadow-orange-500/50"
-              }
+
+        {!user && (
+          <div className="hidden md:flex items-center gap-4">
+            <Link
+              href="/login"
+              className="text-gray-600 hover:text-orange-500 font-medium"
             >
-              Register
-            </Button>
-          </Link>
-        </div>
+              Login
+            </Link>
+            <Link href="/signup">
+              <Button
+                className={
+                  "bg-linear-to-b from-[#ff6b00] to-[#a04100] shadow-lg shadow-orange-500/50"
+                }
+              >
+                Register
+              </Button>
+            </Link>
+          </div>
+        )}
+        {user && (
+          <div className=" flex items-center ml-[120px]  gap-1 px-2 py-3 text-sm text-gray-700">
+            <Avatar className="">
+              <Avatar.Image
+                alt="John Doe"
+                src={user?.image}
+              />
+              <Avatar.Fallback>JD</Avatar.Fallback>
+            </Avatar>
+              <div className="block md:hidden text-sm font-medium text-gray-700">
+                Hi,{user.name?.split(" ")[0] || "User"}
+
+              </div>
+              <div> <Button className=" hidden md:bg-linear-to-b from-[#ff6b00] to-[#a04100] w-full">
+                    Logout
+                  </Button></div>
+         
+          </div>
+        )}
 
         {/* Mobile Toggle */}
         <button
@@ -73,44 +100,46 @@ const NavigationBar = () => {
       </div>
 
       <div
-  className={clsx(
-    "md:hidden transition-all duration-300 overflow-hidden",
-    isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-  )}
->
-  <div className="mx-4 mt-3 rounded-2xl border bg-white shadow-lg p-3 space-y-2">
-
-    {navItems.map((item) => (
-      <NavLink
-        key={item.name}
-        href={item.href}
-        onClick={closeMenu}
+        className={clsx(
+          "md:hidden transition-all duration-300 overflow-hidden",
+          isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0",
+        )}
       >
-        <div className="px-4 py-3 rounded-xl text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition flex justify-between">
-          {item.name}
-          <span>→</span>
+        <div className="mx-4 mt-3 rounded-2xl border bg-white shadow-lg p-3 space-y-2">
+          {navItems.map((item) => (
+            <NavLink key={item.name} href={item.href} onClick={closeMenu}>
+              <div className="px-4 py-3 rounded-xl text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition flex justify-between">
+                {item.name}
+                <span>→</span>
+              </div>
+            </NavLink>
+          ))}
+
+          <div className="border-t my-2"></div>
+          <div>
+            {!user && (
+              <div>
+                <Link
+                  href="/login"
+                  onClick={closeMenu}
+                  className="block px-4 py-3 rounded-xl hover:bg-orange-50 hover:text-orange-600"
+                >
+                  Login
+                </Link>
+
+                <Link href="/signup" onClick={closeMenu}>
+                  <Button className="bg-linear-to-b from-[#ff6b00] to-[#a04100] w-full">
+                    Register
+                  </Button>
+                </Link>
+              </div>
+            )}
+            {user &&  <Button className="bg-linear-to-b from-[#ff6b00] to-[#a04100] w-full">
+                    Logout
+                  </Button>}
+          </div>
         </div>
-      </NavLink>
-    ))}
-
-    <div className="border-t my-2"></div>
-
-    <Link
-      href="/login"
-      onClick={closeMenu}
-      className="block px-4 py-3 rounded-xl hover:bg-orange-50 hover:text-orange-600"
-    >
-      Login
-    </Link>
-
-    <Link href="/signup" onClick={closeMenu}>
-      <Button className="bg-linear-to-b from-[#ff6b00] to-[#a04100] w-full">
-        Register
-      </Button>
-    </Link>
-
-  </div>
-</div>
+      </div>
     </nav>
   );
 };
