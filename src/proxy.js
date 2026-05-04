@@ -40,5 +40,5 @@ if (!session) {
 // export default function proxy(request) { ... }
  
 export const config = {
-  matcher: ['/courses/:path*'],
+  matcher: ['/courses/:path'],
 };
