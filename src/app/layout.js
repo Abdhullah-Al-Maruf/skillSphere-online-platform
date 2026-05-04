@@ -4,7 +4,6 @@ import NavigationBar from "@/components/common/NavigationBar";
 
 import { ToastContainer } from "react-toastify";
 
-
 const fontManrope = Manrope({
   subsets: ["latin"],
 });
@@ -18,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${fontManrope.className} h-full antialiased`}>
       <body className="bg-[#ffece3] min-h-full flex flex-col">
-            <ToastContainer />
+        <ToastContainer />
         <NavigationBar />
         <main className="w-[85%] mx-auto">{children}</main>
       </body>

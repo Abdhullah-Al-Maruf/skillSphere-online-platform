@@ -54,7 +54,7 @@ const Rightside = () => {
       image,
     });
     if (!error) {
-      toast.success("Welcome! Account created Redirecting to login..", {
+      toast.success("Welcome! Account created successful 🎉", {
         position: "top-center",
         autoClose: 3000,
       });

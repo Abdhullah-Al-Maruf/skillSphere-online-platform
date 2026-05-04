@@ -1,5 +1,5 @@
 "use client";
-
+import { authClient } from "@/lib/auth-client"; //import the auth client
 import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
 import {
   Button,
@@ -14,6 +14,7 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion"; // Import Motion
+import { toast } from "react-toastify";
 
 // Animation Variants
 const containerVariants = {
@@ -37,26 +38,40 @@ const itemVariants = {
 const LoginPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log("Login submitted");
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    const { data, error } = await authClient.signIn.email({
+      email,
+      password,
+      callbackURL: "/",
+    });
+    if (error) {
+      toast.error(error.message, {
+        position: "top-center",
+        autoClose: 1000,
+      });
+    }
+    toast.success("Login successful 🎉", {
+      position: "top-center",
+      autoClose: 1000,
+    });
   };
 
   return (
     <div className=" mt-30 flex items-center justify-center  px-4">
       {/* Main Card with Motion */}
       <motion.div
-        className="w-full max-w-[400px] bg-white border
-         border-gray-200 shadow-lg p-8 rounded-2xl"
+        className="w-full max-w-[400px] bg-white border border-gray-200 shadow-lg p-8 rounded-2xl"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         {/* Header Section */}
         <motion.div variants={itemVariants} className="text-center mb-8">
-          <span
-            className="text-2xl font-bold bg-linear-to-r from-[#ff6b00] to-[#a04100] bg-clip-text text-transparent block mb-2"
-          >
+          <span className="text-2xl font-bold bg-linear-to-r from-[#ff6b00] to-[#a04100] bg-clip-text text-transparent block mb-2">
             SkillSphere
           </span>
           <h1 className="text-2xl font-bold text-gray-900">Welcome back</h1>
@@ -84,9 +99,11 @@ const LoginPage = () => {
                 return null;
               }}
             >
-              <Label className="text-gray-700 font-semibold text-sm">Email Address</Label>
-              <Input 
-                placeholder="name@example.com" 
+              <Label className="text-gray-700 font-semibold text-sm">
+                Email Address
+              </Label>
+              <Input
+                placeholder="name@example.com"
                 className=" border border-orange-200 focus-within:border-orange-500 transition-colors"
               />
               <FieldError />
@@ -96,7 +113,9 @@ const LoginPage = () => {
           {/* Password Field */}
           <motion.div variants={itemVariants}>
             <TextField isRequired className="w-full" name="password">
-              <Label className="text-gray-700 font-semibold text-sm">Password</Label>
+              <Label className="text-gray-700 font-semibold text-sm">
+                Password
+              </Label>
               <InputGroup className="rounded-xl border border-orange-200 focus-within:border-orange-500 transition-colors">
                 <InputGroup.Input
                   placeholder="••••••••"
@@ -149,8 +168,8 @@ const LoginPage = () => {
 
         {/* Google Button */}
         <motion.div variants={itemVariants}>
-          <Button 
-            className="w-full rounded-xl border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-orange-300 transition-colors" 
+          <Button
+            className="w-full rounded-xl border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-orange-300 transition-colors"
             variant="bordered"
           >
             <Icon icon="devicon:google" className="text-lg mr-2" />
@@ -159,9 +178,15 @@ const LoginPage = () => {
         </motion.div>
 
         {/* Footer Link */}
-        <motion.div variants={itemVariants} className="text-center mt-6 text-sm">
+        <motion.div
+          variants={itemVariants}
+          className="text-center mt-6 text-sm"
+        >
           <span className="text-gray-500">New to SkillSphere? </span>
-          <Link href='/signup' className="font-semibold text-orange-600 hover:text-orange-700 transition-colors ml-1">
+          <Link
+            href="/signup"
+            className="font-semibold text-orange-600 hover:text-orange-700 transition-colors ml-1"
+          >
             Register
           </Link>
         </motion.div>
