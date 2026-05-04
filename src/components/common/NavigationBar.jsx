@@ -27,11 +27,11 @@ const NavigationBar = () => {
   // for avatar and conditional sign in signup showing we need the session data
   const userData = authClient.useSession();
   const user = userData.data?.user;
-const handleLogout= async()=>{
-  toast.info("Signout Successful")
-  await authClient.signOut();
-}
-console.log(user);
+  const handleLogout = async () => {
+    toast.info("Signout Successful");
+    await authClient.signOut();
+  };
+  console.log(user);
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -74,28 +74,36 @@ console.log(user);
         )}
         {user && (
           <div className=" flex items-center ml-[120px]  gap-1 px-2 py-3 text-sm text-gray-700">
-         <Avatar>
-  <Avatar.Image
-    alt={user?.name || "User"}
-    src={user?.image || undefined}
-  />
+            <Link href={"/profile"}>
+            
+           <div>
+     <Avatar>
+              <Avatar.Image
+                alt={user?.name || "User"}
+                src={user?.image || undefined}
+              />
 
-  <Avatar.Fallback>
-    {user?.name
-      ? user.name.trim().split(/\s+/)[0][0].toUpperCase()
-      : "U"}
-  </Avatar.Fallback>
-</Avatar>
-              <div className="block md:hidden text-sm font-medium text-gray-700">
-                Hi,{user.name?.split(" ")[0] || "User"}
-
-              </div>
-              <div> <Button
-              onClick={handleLogout}
-              className=" hidden md:block bg-linear-to-b from-[#ff6b00] to-[#ff3d00] w-full">
-                    Logout
-                  </Button></div>
-         
+              <Avatar.Fallback>
+                {user?.name
+                  ? user.name.trim().split(/\s+/)[0][0].toUpperCase()
+                  : "U"}
+              </Avatar.Fallback>
+            </Avatar>
+            <div className="block md:hidden text-sm font-medium text-gray-700">
+              Hi,{user.name?.split(" ")[0] || "User"}
+            </div>
+           </div>
+            </Link>
+       
+            <div>
+              
+              <Button
+                onClick={handleLogout}
+                className=" hidden md:block bg-linear-to-b from-[#ff6b00] to-[#ff3d00] w-full"
+              >
+                Logout
+              </Button>
+            </div>
           </div>
         )}
 
@@ -145,11 +153,14 @@ console.log(user);
                 </Link>
               </div>
             )}
-            {user &&  <Button  
-            onClick={handleLogout}
-            className="bg-linear-to-b  from-[#ff6b00] to-[#ff3d00] w-full">
-                    Logout
-                  </Button>}
+            {user && (
+              <Button
+                onClick={handleLogout}
+                className="bg-linear-to-b  from-[#ff6b00] to-[#ff3d00] w-full"
+              >
+                Logout
+              </Button>
+            )}
           </div>
         </div>
       </div>

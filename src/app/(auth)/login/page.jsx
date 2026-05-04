@@ -15,6 +15,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion"; // Import Motion
 import { toast } from "react-toastify";
+import { useRouter, useSearchParams } from "next/navigation";
 
 // Animation Variants
 const containerVariants = {
@@ -36,8 +37,14 @@ const itemVariants = {
 };
 
 const LoginPage = () => {
+// three line code for redirecting to the details page using proxy.js if not use this  it will return to the home page 
+  //.......
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const callbackUrl = searchParams.get("callbackUrl") || "/";
+//..............
   const [isVisible, setIsVisible] = useState(false);
-// for email pass 
+  // for email pass
   const onSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -46,25 +53,32 @@ const LoginPage = () => {
     const { data, error } = await authClient.signIn.email({
       email,
       password,
-      callbackURL: "/",
+      // callbackURL: "/",
     });
     if (error) {
       toast.error(error.message, {
         position: "top-center",
         autoClose: 1000,
       });
+      return; //return if error
     }
+
     toast.success("Login successful 🎉", {
       position: "top-center",
       autoClose: 1000,
     });
+
+    // 🔥 redirect after success
+    router.push(callbackUrl);
+    
   };
   // for google auth
-  const handleGoogle= async()=>{
-    await authClient.signIn.social({
-    provider: "google",
-  });
-  }
+    const handleGoogle = async () => {
+      await authClient.signIn.social({
+        provider: "google",
+        callbackURL: callbackUrl,
+      });
+    };
 
   return (
     <div className=" mt-30 flex items-center justify-center  px-4">
@@ -175,7 +189,7 @@ const LoginPage = () => {
         {/* Google Button */}
         <motion.div variants={itemVariants}>
           <Button
-          onClick={handleGoogle}
+            onClick={handleGoogle}
             className="w-full rounded-xl border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-orange-300 transition-colors"
             variant="bordered"
           >
