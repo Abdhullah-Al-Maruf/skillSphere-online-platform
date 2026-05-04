@@ -37,7 +37,7 @@ const itemVariants = {
 
 const LoginPage = () => {
   const [isVisible, setIsVisible] = useState(false);
-
+// for email pass 
   const onSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -59,6 +59,12 @@ const LoginPage = () => {
       autoClose: 1000,
     });
   };
+  // for google auth
+  const handleGoogle= async()=>{
+    await authClient.signIn.social({
+    provider: "google",
+  });
+  }
 
   return (
     <div className=" mt-30 flex items-center justify-center  px-4">
@@ -169,6 +175,7 @@ const LoginPage = () => {
         {/* Google Button */}
         <motion.div variants={itemVariants}>
           <Button
+          onClick={handleGoogle}
             className="w-full rounded-xl border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-orange-300 transition-colors"
             variant="bordered"
           >

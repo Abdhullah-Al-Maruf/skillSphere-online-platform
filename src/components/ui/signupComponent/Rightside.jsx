@@ -39,7 +39,7 @@ const itemVariants = {
 const Rightside = () => {
   const route = useRouter();
   const [isVisible, setIsVisible] = useState(false);
-
+// for email signup
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -68,6 +68,12 @@ const Rightside = () => {
     }
   };
 
+ // for google auth
+  const handleGoogle= async()=>{
+    await authClient.signIn.social({
+    provider: "google",
+  });
+  }
   return (
     <div className="w-full max-w-[500px] mt-2 py-10">
       <motion.div
@@ -212,6 +218,7 @@ const Rightside = () => {
 
         <motion.div variants={itemVariants}>
           <Button
+          onClick={handleGoogle}
             className="w-full rounded-xl border border-orange-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-orange-300 transition-colors h-12"
             variant="bordered"
           >
