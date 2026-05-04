@@ -15,7 +15,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion"; // Import Motion
 import { toast } from "react-toastify";
-// import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 // Animation Variants
 const containerVariants = {
@@ -39,9 +39,9 @@ const itemVariants = {
 const LoginPage  = () => {
 // three line code for redirecting to the details page using proxy.js if not use this  it will return to the home page 
   //.......
-  // const searchParams = useSearchParams();
-  // const router = useRouter();
-  // const callbackUrl = searchParams.get("callbackUrl") || "/";
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const callbackUrl = searchParams.get("callbackUrl") || "/";
 //..............
   const [isVisible, setIsVisible] = useState(false);
   // for email pass
@@ -53,7 +53,7 @@ const LoginPage  = () => {
     const { data, error } = await authClient.signIn.email({
       email,
       password,
-      callbackURL: "/",
+      // callbackURL: "/",
     });
     if (error) {
       toast.error(error.message, {
@@ -69,14 +69,14 @@ const LoginPage  = () => {
     });
 
     // 🔥redirect after success
-    // router.push(callbackUrl);
+    router.push(callbackUrl);
     
   };
   // for google auth
     const handleGoogle = async () => {
       await authClient.signIn.social({
         provider: "google",
-        // callbackURL: callbackUrl,
+        callbackURL: callbackUrl,
       });
     };
 

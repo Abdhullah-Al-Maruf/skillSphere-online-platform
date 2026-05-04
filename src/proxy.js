@@ -5,12 +5,12 @@ import { headers } from 'next/headers'
 
 // This function can be marked `async` if using `await` inside
 export async function proxy(request) {
-// const { pathname } = request.nextUrl;
+const { pathname } = request.nextUrl;
   
-  // // Allow access to /courses list page
-  // if (pathname === '/courses') {
-  //   return NextResponse.next();
-  // }
+  // Allow access to /courses list page
+  if (pathname === '/courses') {
+    return NextResponse.next();
+  }
 
 
 
@@ -20,19 +20,19 @@ const session = await auth.api.getSession({
 })
 
 //  this things return me to home so the solution is 
-  if(!session){
+//   if(!session){
 
-  return NextResponse.redirect(new URL('/login', request.url))
-}
-// solution
-// if (!session) {
-//   const loginUrl = new URL("/login", request.url);
-
-//   // save where user wanted to go
-//   loginUrl.searchParams.set("callbackUrl", request.url);
-
-//   return NextResponse.redirect(loginUrl);
+//   return NextResponse.redirect(new URL('/login', request.url))
 // }
+// solution
+if (!session) {
+  const loginUrl = new URL("/login", request.url);
+
+  // save where user wanted to go
+  loginUrl.searchParams.set("callbackUrl", request.url);
+
+  return NextResponse.redirect(loginUrl);
+}
 
 }
  
