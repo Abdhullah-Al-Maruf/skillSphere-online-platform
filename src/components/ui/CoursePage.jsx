@@ -239,7 +239,7 @@ export default function CoursePage({ course }) {
                   <div key={idx}>
                     <button
                       onClick={() => toggleSection(idx)}
-                      className="w-full flex items-center justify-between p-4 hover:bg-slate-50 transition-colors text-left"
+                      className="w-full cursor-pointer flex items-center justify-between p-4 hover:bg-slate-50 transition-colors text-left"
                     >
                       <div className="flex items-center gap-3">
                         {expandedSection === idx ? (
@@ -324,7 +324,7 @@ export default function CoursePage({ course }) {
                     4 days left at this price!
                   </p>
                   
-                  <button className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3.5 px-4 rounded-lg mb-3 transition-all shadow-md hover:shadow-lg active:scale-[0.98]">
+                  <button className="cursor-pointer w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3.5 px-4 rounded-lg mb-3 transition-all shadow-md hover:shadow-lg active:scale-[0.98]">
                     Add to cart
                   </button>
                   

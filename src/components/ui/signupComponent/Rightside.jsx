@@ -55,6 +55,9 @@ const Rightside = () => {
       image,
     });
     if (!error) {
+       // Sign out the user after signup 
+      await authClient.signOut();
+
       toast.success("Welcome! Account created successful 🎉", {
         position: "top-center",
         autoClose: 3000,
