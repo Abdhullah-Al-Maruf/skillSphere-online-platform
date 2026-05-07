@@ -70,7 +70,7 @@ const Rightside = () => {
         autoClose: 1000,
       });
     }
-    console.log(data,error);
+
   };
 
  // for google auth
