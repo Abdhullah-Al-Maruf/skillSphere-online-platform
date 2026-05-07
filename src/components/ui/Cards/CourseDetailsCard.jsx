@@ -3,13 +3,13 @@ import { div } from "framer-motion/client";
 import Image from "next/image";
 import React from "react";
 import { FaFire } from "react-icons/fa";
-import { FadeLoader } from "react-spinners";
+import Spinner from "../loader/Spinner";
 
 const CourseDetailsCard = ({ course }) => {
   if (!course)
     return (
-      <div>
-        <FadeLoader color="orange" />;
+      <div className="flex justify-center items-center h-48">
+        <Spinner />
       </div>
     );
   const { title, image,badges,level } = course;

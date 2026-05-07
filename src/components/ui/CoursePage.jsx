@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { FadeLoader } from "react-spinners";
+import Spinner from "./loader/Spinner";
+import RevealWrapper from "../common/RevealWrapper";
 
 import { 
   Star, Clock, Users, Bookmark, Share2, Check, ChevronDown, 
@@ -17,7 +18,7 @@ export default function CoursePage({ course }) {
   if (!course) {
     return (
       <div className="min-h-screen flex justify-center items-center bg-slate-50">
-        <FadeLoader color="#f97316" />
+        <Spinner />
       </div>
     );
   }
@@ -87,7 +88,8 @@ export default function CoursePage({ course }) {
     .map(s => s.trim() + ".");
 
   return (
-    <div className="min-h-screen bg-white">
+    <RevealWrapper>
+      <div className="min-h-screen bg-white">
       
    
       <section className="bg-linear-to-r from-[#ff8a00] to-[#ff3d00] text-white text-white pb-8">
@@ -426,6 +428,7 @@ export default function CoursePage({ course }) {
 
         </div>
       </div>
-    </div>
+      </div>
+    </RevealWrapper>
   );
 }

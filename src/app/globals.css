@@ -10,6 +10,12 @@
   }
 }
 
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .animate-bounce-slow {
   animation: floaty 3s ease-in-out infinite;
 }
