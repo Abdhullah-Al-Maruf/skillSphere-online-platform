@@ -4,9 +4,9 @@ import React from 'react';
 
 const layout = ({children}) => {
     return (
-        <div>
+        <div >
        
-            <main>
+            <main className='w-[85%] mx-auto'>
                 {children}
                 </main>  
                 <Footer/>

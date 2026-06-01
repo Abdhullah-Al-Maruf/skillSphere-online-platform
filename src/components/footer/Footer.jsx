@@ -1,9 +1,12 @@
 import React from "react";
 import Link from "next/link"; // Import Next.js Link
 import { Button } from "@heroui/react";
+import { div } from "framer-motion/client";
 
 export default function Footer() {
   return (
+
+    
     <footer className="bg-[#ffece3] border-t border-gray-200 pt-12 pb-8 px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Brand Section */}

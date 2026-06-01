@@ -19,12 +19,12 @@ import CustomCursor from "@/components/common/CustomCursor";
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${fontManrope.className} h-full antialiased`}>
-      <body className="bg-[#ffece3] min-h-full flex flex-col">
+      <body className="bg-linear-to-br from-orange-50 to-white min-h-full flex flex-col">
         <CustomCursor />
         <SmoothScroll>
           <ToastContainer />
           <NavigationBar />
-          <main className="w-[85%] mx-auto">{children}</main>
+          <main className="">{children}</main>
         </SmoothScroll>
       </body>
     </html>
